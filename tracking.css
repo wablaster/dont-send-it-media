@@ -1,7 +1,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-html, body { background:#0E1525 !important; color:#F4E8D4 !important; }
+html, body, #app, form#form-checkout { background:#0E1525 !important; color:#F4E8D4 !important; }
+html, body { overflow-x: hidden !important; }
 body, p, li, span, label, input, select, textarea, button {
   font-family: Outfit, ui-sans-serif, system-ui, sans-serif !important;
 }
@@ -10,8 +11,22 @@ h1, h2, h3, h4 {
   font-weight: 500 !important;
   color: #F4E8D4 !important;
 }
-p, li { color:#C9BBA4 !important; }
+p, li, label { color:#C9BBA4 !important; }
 a { color:#C9A84C !important; }
+
+/* Let the page go full width so HTML + till are one field */
+section, form#form-checkout, #app > form > div {
+  background: #0E1525 !important;
+  max-width: none !important;
+  width: 100% !important;
+}
+div[width="1120px"], div[width="420"], div[width="800px"] {
+  width: 100% !important;
+  max-width: 1120px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
 button, [type="submit"] {
   background:#C9A84C !important;
   color:#0E1525 !important;
@@ -21,5 +36,14 @@ button, [type="submit"] {
   text-transform:uppercase !important;
   font-size:13px !important;
 }
-section { background: transparent !important; }
+input, select, textarea {
+  background:#0B101C !important;
+  color:#F4E8D4 !important;
+  border:1px solid rgba(201,168,76,.35) !important;
+  border-radius:0 !important;
+}
+
+@media (max-width: 639px) {
+  section { padding-left: 0 !important; padding-right: 0 !important; }
+}
 </style>
